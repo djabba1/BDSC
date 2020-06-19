@@ -94,7 +94,7 @@ function loadtoc(json) {
             var pll = '';
             if ("category" in entry) {
                for (var k = 0; k < entry.category.length; k++) {
-                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="cliquez pour séléctionner tous les articles par catégorie \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
+                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Click here to select all posts with label \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
                }
             var l = pll.lastIndexOf(',');
             if (l != -1) { pll = pll.substring(0,l); }
@@ -183,9 +183,9 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'Titre d'article';
+   var tocHead1 = 'Titre Article';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'Date d'article';
+   var tocHead2 = 'Date Article';
    var tocTool2 = 'Click to sort by date';
    var tocHead3 = 'Catégories';
    var tocTool3 = '';
@@ -206,7 +206,7 @@ function displayToc(filter) {
       tocTool2 += ' (oldest first)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Click pour voir tous les articles';
+      tocTool3 = 'Click to show all posts';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -234,9 +234,9 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note"> Nombre d'articles ' + postTitle.length + ' Articles<br/></span>'; }
+      var tocNote = '<span class="toc-note"> Number of Posts ' + postTitle.length + ' Posts<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Nombre d'articles ' + numDisplayed + ' Articles \'';
+      var tocNote = '<span class="toc-note">Number of Posts ' + numDisplayed + ' Posts \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' Posts <br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
@@ -263,9 +263,9 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Patientez un moment ..."); }
+  else { alert("Just wait... Index is loading"); }
 }
-"<div id=\"toc-loading\">Patientez un moment ...<br /><img align=\"middle\" src=\"https://zupimages.net/up/20/25/k0z9.gif" /></div>"
+"<div id=\"toc-loading\">Loading content, please wait...<br /><img align=\"middle\" src=\"http://2.bp.blogspot.com/-WK0-4ILTaL8/T0NjToWRWlI/AAAAAAAABmI/U5p3cqo9lOU/s1600/loading.gif\" /></div>"
 
 function hideToc() {
   var tocdiv = document.getElementById("toc");
@@ -273,4 +273,4 @@ function hideToc() {
   var toclink = document.getElementById("toclink");
   toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
-"<div id=\"toc-loading\">Patientez un moment ...<br /><img align=\"middle\" src=\"https://zupimages.net/up/20/25/k0z9.gif\" /></div>";
+"<div id=\"toc-loading\">Just wait... Index is loading<br /><img align=\"middle\" src=\"http://2.bp.blogspot.com/-WK0-4ILTaL8/T0NjToWRWlI/AAAAAAAABmI/U5p3cqo9lOU/s1600/loading.gif\" /></div>";
