@@ -183,9 +183,9 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'Post Title';
+   var tocHead1 = 'Titre Article';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'Post Date';
+   var tocHead2 = 'Date Article';
    var tocTool2 = 'Click to sort by date';
    var tocHead3 = 'Articles';
    var tocTool3 = '';
