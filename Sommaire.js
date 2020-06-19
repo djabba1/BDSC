@@ -234,9 +234,9 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note"> Number of Posts ' + postTitle.length + ' Posts<br/></span>'; }
+      var tocNote = '<span class="toc-note"> Nombre de postes ' + postTitle.length + ' Articles<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Number of Posts ' + numDisplayed + ' Posts \'';
+      var tocNote = '<span class="toc-note">Nombre de postes ' + numDisplayed + ' Articles \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' Posts <br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
